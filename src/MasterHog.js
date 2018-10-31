@@ -20,7 +20,6 @@ export default class MasterHog extends Component {
     })
   }
 
-
   render() {
     return (
       <div>
@@ -41,9 +40,7 @@ export default class MasterHog extends Component {
         </div>
 
         <ul className="hoglist">
-          <BabyHog eyeColor={this.state.eyeColor} offspring={offspring[0]}/>
-          <BabyHog eyeColor={this.state.eyeColor} offspring={offspring[1]}/>
-          <BabyHog eyeColor={this.state.eyeColor} offspring={offspring[2]}/>
+          {offspring.map(pigObj => <BabyHog eyeColor={this.state.eyeColor} offspring={pigObj} />)}
         </ul>
 
       </div>
